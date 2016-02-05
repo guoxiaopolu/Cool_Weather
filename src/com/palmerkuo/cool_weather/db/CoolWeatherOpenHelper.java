@@ -9,7 +9,7 @@ public class CoolWeatherOpenHelper extends SQLiteOpenHelper {
 
 	public CoolWeatherOpenHelper(Context context, String name, CursorFactory factory, int version) {
 		super(context, name, factory, version);
-		
+
 	}
 
 	/*
@@ -27,7 +27,7 @@ public class CoolWeatherOpenHelper extends SQLiteOpenHelper {
 			+ "city_name text," + "city_code text," + "province_id integer)";
 
 	/*
-	 * Contry表建表语句
+	 * County表建表语句
 	 */
 
 	public static final String CREATE_COUNTY = "create table County(" + "id integer primary key autoincrement,"
@@ -38,12 +38,12 @@ public class CoolWeatherOpenHelper extends SQLiteOpenHelper {
 		// TODO Auto-generated method stub
 		db.execSQL(CREATE_PROVINCE);
 		db.execSQL(CREATE_CITY);
-		db.execSQL(CREATE_CONTRY);
+		db.execSQL(CREATE_COUNTY);
 	}
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 		// TODO Auto-generated method stub
-		
+
 	}
 }
